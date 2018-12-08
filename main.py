@@ -1,13 +1,12 @@
 class Planet:
-    def __init__(self):
-        self.name = "Hoth"
-        self.radius = 2000
-        self.gravity = 5.5
-        self.system = "Hoth System"
-        
-    def orbit(self):
-        return f'{self.name} is orbiting in the {self.system}'
+    def __init__(self, name, radius, gravity, system):
+        self.name = name
+        self.radius = radius
+        self.gravity = gravity
+        self.system = system
 
-hoth = Planet()
-print(hoth.radius)
+    def orbit(self):
+        return f'{self.name} is orbiting in the {self.system} system'
+
+hoth = Planet("retard", 2000, 5.5, "yolo")
 print(hoth.orbit())
