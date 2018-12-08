@@ -1,7 +1,3 @@
-grades = ['A', 'B', 'C', 'F', 'A', 'F', 'D', 'F']
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
-def func(grade):
-    return grade != 'F'
-
-print(list(filter(func, grades)))
+print(list(map(lambda n: n**2, nums)))
