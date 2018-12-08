@@ -1,7 +1,35 @@
-for a in range(1, 1000):
-    for b in range(a + 1, 1000):
-        for c in range(b + 1, 1000):
-            if a + b + c != 1000:
-                continue
-            if a**2 + b**2 == c**2:
-                print(a*b*c)
+chains = [0, 1]
+m = 0
+result = 0
+
+for start in range(2, 1000000):
+    num = start
+    index = 1
+    length = 0
+    while num != 1:
+        if num % 2 == 0:
+            num = int(num / 2)
+        else:
+            num = 3 * num + 1
+        length += 1
+        if num < start:
+            length += chains[num]
+            break
+    chains.append(length)
+
+for index in range(len(chains)):
+    if m < chains[index]:
+        m = chains[index]
+        result = index
+
+    
+print(result)
+
+
+
+
+
+
+
+
+
