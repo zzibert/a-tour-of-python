@@ -1,10 +1,9 @@
-def area(radius):
-    return 3.142 * radius ** 2
+name = "ryuuuu"
 
-def vol(area, length):
-    return area * length
+def print_name():
+    global name
+    name = "ryu"
+    print("the name inside the function is", name)
 
-radius = int(input("enter a radius"))
-length = int(input("enter a length!"))
-
-print(vol(area(radius), length))
+print_name()
+print("outside the function the name is:", name)
