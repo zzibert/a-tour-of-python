@@ -1,18 +1,22 @@
-def is_palindrome(number):
-    arr1 = list(str(number))
-    arr2 = list(reversed(arr1))
-    for i in range(len(arr1)):
-        if arr1[i] != arr2[i]:
+counter = 3
+
+primes = [2]
+
+def is_prime(number, primes):
+    for prime in primes:
+        if number % prime == 0:
             return False
+    primes.append(number)
     return True
 
-biggest = 0
+counter = 1
+number = 3
 
-for num1 in range(100, 1000):
-    for num2 in range(100, 1000):
-        result = num1 * num2
-        if is_palindrome(result):
-            if biggest < result:
-                biggest = result
+while counter < 10001:
+    if is_prime(number, primes):
+        counter += 1
+    number += 1
 
-print(biggest)
+print(primes)
+
+    
