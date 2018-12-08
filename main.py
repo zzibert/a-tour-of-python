@@ -1,13 +1,10 @@
-# for n in range(3, 10):
-#     print(n)
+def area(radius):
+    return 3.142 * radius ** 2
 
-# for n in range(0, 20, 4):
-#     print(n)
+def vol(area, length):
+    return area * length
 
-burgers = ["beef", "chicken", "nvm"]
+radius = int(input("enter a radius"))
+length = int(input("enter a length!"))
 
-# for n in range(len(burgers)):
-#     print(n, burgers[n])
-
-for n in range(len(burgers) - 1, -1, -1):
-    print(n, burgers[n])
+print(vol(area(radius), length))
