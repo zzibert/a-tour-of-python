@@ -1,6 +1,3 @@
-def func() :
-    print("trololo")
+print(type(1))
 
-func()
-
-    
+print(type(1.5))
