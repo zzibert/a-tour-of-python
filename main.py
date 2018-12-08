@@ -1,24 +1,9 @@
-class Planet:
+from space.planet import Planet
+from space.calc import planet_mass, planet_vol
 
-    shape = 'round'
+hoth = Planet('Retard', 2000, 5.5, "Yolo system")
 
-    def __init__(self, name, radius, gravity, system):
-        self.name = name
-        self.radius = radius
-        self.gravity = gravity
-        self.system = system
+hoth_mass = planet_mass(hoth.gravity, hoth.radius)
+hoth_vol = planet_vol(hoth.radius)
 
-    def orbit(self):
-        return f'{self.name} is orbiting in the {self.system} system'
-
-    @classmethod
-    def commons(cls):
-        return f'All planets are {cls.shape}'
-
-    @staticmethod
-    def spin(speed = '2000 miles per hour'):
-        return f'The planet spins at {speed}'
-
-
-hoth = Planet("retard", 2000, 5.5, "yolo")
-print(hoth.spin())
+print(hoth_mass, hoth_vol)
