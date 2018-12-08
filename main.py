@@ -1,8 +1,11 @@
-# this is a comment
+num1 = 3.12343545
+num2 = 10.234234234
 
+#previous
+#print('num 1 is', num1, '\nand num2 is', num2)
 
+#Format method
+#print('num 1 is {0:.3f} and num 2 is {1:.3f}'.format(num1, num2))
 
-#calc the area of the circle
-radius = input('Enter the radius of your circle \n')
-area = 3.142 * int(radius)**2
-print(area)
+#using f-strings
+print(f'num 1 is {num1} and num 2 is {num2}')
