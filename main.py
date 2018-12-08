@@ -1,9 +1,14 @@
-name = "ryuuuu"
+def ninja_intro(dict):
+    for key, value in dict.items():
+        print(f'i am {key} and i am {value} belt')
 
-def print_name():
-    global name
-    name = "ryu"
-    print("the name inside the function is", name)
+ninja = {}
 
-print_name()
-print("outside the function the name is:", name)
+
+name = input("enter your name")
+belt = input("enter a belt colour")
+ninja["name"] = name
+ninja["belt"] = belt
+
+
+ninja_intro(ninja)
