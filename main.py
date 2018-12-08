@@ -1,23 +1,13 @@
-def belt_count(dict):
-    belts = list(dict.values())
-    for belt in set(belts):
-        num = belts.count(belt)
-        print(f"there are {num} {belt} belts")
+class Planet:
+    def __init__(self):
+        self.name = "Hoth"
+        self.radius = 2000
+        self.gravity = 5.5
+        self.system = "Hoth System"
+        
+    def orbit(self):
+        return f'{self.name} is orbiting in the {self.system}'
 
-# def ninja_intro(dict):
-#     for key, value in dict.items():
-#         print(f'i am {key} and i am {value} belt')
-
-ninja = {}
-
-while True:
-    name = input("enter name")
-    belt = input("enter belt")
-    ninja[name] = belt
-    if input("continue?") == "y":
-        continue
-    else:
-        break
-
-
-belt_count(ninja)
+hoth = Planet()
+print(hoth.radius)
+print(hoth.orbit())
