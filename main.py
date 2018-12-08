@@ -1,11 +1,7 @@
-from random import shuffle
+grades = ['A', 'B', 'C', 'F', 'A', 'F', 'D', 'F']
 
-words = ['one', 'two', 'three', 'four', 'five']
 
-def jumble(word):
-    anagram = list(word)
-    anagram.reverse()
-    return "-".join(anagram)
-    
-print([ jumble(w) for w in words])
+def func(grade):
+    return grade != 'F'
 
+print(list(filter(func, grades)))
