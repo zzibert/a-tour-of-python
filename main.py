@@ -1,8 +1,11 @@
-from bar_tab import Tab
+prizes = [5, 10, 50, 100, 1000]
 
-me = Tab()
+#comprehension method
+# double = [ prize* 2 for prize in prizes ]
+# print(double)
 
-me.add('beef')
-me.add('chicken')
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-me.print_bill(10, 10)
+square = [ n**2 for n in nums if n % 2 == 0 ]
+print(square)
+
