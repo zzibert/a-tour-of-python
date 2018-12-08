@@ -1,4 +1,8 @@
-ninjas = ['a', 'b', 'c', 'd', 'e']
+age = 25
 
-for ninja in ninjas:
-    print(ninja)
+num = 0
+
+while num < age:
+    num += 1
+    
+print(num)
