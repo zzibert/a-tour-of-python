@@ -1,31 +1,23 @@
-chains = [0, 1]
-m = 0
-result = 0
 
-for start in range(2, 1000000):
-    num = start
-    index = 1
-    length = 0
-    while num != 1:
-        if num % 2 == 0:
-            num = int(num / 2)
-        else:
-            num = 3 * num + 1
-        length += 1
-        if num < start:
-            length += chains[num]
-            break
-    chains.append(length)
+dictionary = dict()
 
-for index in range(len(chains)):
-    if m < chains[index]:
-        m = chains[index]
-        result = index
+limit = 2000000
 
-    
-print(result)
+for i in range(2, limit):
+    dictionary[i] = 1
 
+for i in range(2, limit):
+    counter = 2 * i
+    while counter < limit:
+        dictionary[counter] = 0
+        counter += i
 
+suma = 0
+for i in range(2, limit):
+    if dictionary[i] == 1:
+        suma += i
+
+print(suma)
 
 
 
