@@ -1,23 +1,9 @@
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-dictionary = dict()
+def square(n):
+    return n**2
 
-limit = 2000000
-
-for i in range(2, limit):
-    dictionary[i] = 1
-
-for i in range(2, limit):
-    counter = 2 * i
-    while counter < limit:
-        dictionary[counter] = 0
-        counter += i
-
-suma = 0
-for i in range(2, limit):
-    if dictionary[i] == 1:
-        suma += i
-
-print(suma)
+print(list(map(lambda n: n**2, nums)))
 
 
 
