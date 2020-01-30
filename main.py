@@ -1,8 +1,13 @@
-counter = 1
-sum = 0
-while counter < 1000:
-    if counter % 3 == 0 or counter % 5 == 0:
-      sum += counter
-    counter += 1
+primes = [2, 3, 5, 7]
+number
+i = 4
 
-print(sum)
+def is_prime(num, primes):
+  for prime in primes:
+    if num % prime == 0:
+      return
+  primes.append(num)
+
+while i < counter:
+  
+
